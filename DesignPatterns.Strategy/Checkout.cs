@@ -9,26 +9,10 @@
             this.order = order;
         }
 
-        public decimal CalculateShipping()
+        //This is all that is left after strategy. No more if else block
+        public decimal CalculateShipping(IShippingStrategy shippingMethod)
         {
-            if (order.ShippingMethod == "Fedex")
-            {
-                //after some complex logic
-                return 4.00m;
-            }
-
-            if (order.ShippingMethod == "Ups")
-            {
-                //after some complex logic
-                return 3.00m;
-            }
-
-            return 2.00m;
+            return shippingMethod.CalculateShipping(order);
         }
-    }
-
-    public class Order
-    {
-        public string ShippingMethod { get; set; }
     }
 }
