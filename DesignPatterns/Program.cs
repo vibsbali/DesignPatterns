@@ -1,5 +1,5 @@
-﻿using System;
-using DesignPatterns.Strategy;
+﻿using DesignPatterns.Strategy;
+using System;
 
 namespace DesignPatterns
 {
@@ -8,8 +8,7 @@ namespace DesignPatterns
         static void Main(string[] args)
         {
             var order = new Order();
-            order.ShippingMethod = "UPS";
-
+            //Note we no longer have to set the shipping type in Order
             var shippingMethod = new FedexShippingStrategy();
 
             Console.WriteLine(new Checkout(order).CalculateShipping(shippingMethod));
