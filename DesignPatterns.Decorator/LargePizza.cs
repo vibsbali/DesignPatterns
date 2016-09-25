@@ -1,6 +1,6 @@
 ﻿namespace DesignPatterns.Decorator
 {
-    public class LargePizza : AbstractPizza
+    public sealed class LargePizza : AbstractPizza
     {
         public override string GetDescription()
         {

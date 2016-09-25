@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CheeseDecorator.cs" />
+    <Compile Include="HamDecorator.cs" />
     <Compile Include="LargePizza.cs" />
     <Compile Include="MediumPizza.cs" />
     <Compile Include="Pizza.cs" />

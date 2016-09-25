@@ -7,7 +7,7 @@
             Pizza = pizza;
         }
 
-        public AbstractPizza Pizza { get; private set; }
+        public AbstractPizza Pizza { get; }
 
         public override string GetDescription()
         {

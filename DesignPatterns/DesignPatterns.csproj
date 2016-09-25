@@ -49,6 +49,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DesignPatterns.Decorator\DesignPatterns.Decorator.csproj">
+      <Project>{1A7EEA4A-0AA6-48FE-9620-A801C572D645}</Project>
+      <Name>DesignPatterns.Decorator</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
