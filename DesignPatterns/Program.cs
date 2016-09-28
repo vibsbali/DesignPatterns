@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DesignPatterns.Decorator;
+using DesignPatterns.Strategy;
+using DesignPatterns.Strategy.ShippingSelector;
+
 
 namespace DesignPatterns
 {
@@ -11,12 +9,12 @@ namespace DesignPatterns
     {
         static void Main(string[] args)
         {
-            AbstractPizza pizza = new LargePizza();
-            pizza = new CheeseDecorator(pizza);
-            pizza = new HamDecorator(pizza);
+            var order = new Order();
+            //Note we no longer have to set the shipping type in Order
+            var shippingMethodSelected = ShippingMethods.Fedex;
+            var shippingMethod = new AllShippingMethods().GetShippingMethods(shippingMethodSelected);
 
-            Console.WriteLine(pizza.CalculatePrice());
-            Console.WriteLine(pizza.GetDescription());
+            Console.WriteLine(new Checkout(order).CalculateShipping(shippingMethod));
         }
     }
 }
