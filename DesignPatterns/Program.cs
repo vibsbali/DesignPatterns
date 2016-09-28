@@ -1,5 +1,7 @@
-﻿using DesignPatterns.Strategy;
-using System;
+﻿using System;
+using DesignPatterns.Strategy;
+using DesignPatterns.Strategy.ShippingSelector;
+
 
 namespace DesignPatterns
 {
@@ -9,7 +11,8 @@ namespace DesignPatterns
         {
             var order = new Order();
             //Note we no longer have to set the shipping type in Order
-            var shippingMethod = new FedexShippingStrategy();
+            var shippingMethodSelected = ShippingMethods.Fedex;
+            var shippingMethod = new AllShippingMethods().GetShippingMethods(shippingMethodSelected);
 
             Console.WriteLine(new Checkout(order).CalculateShipping(shippingMethod));
         }

@@ -40,12 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ShippingSelector\AllShippingMethods.cs" />
     <Compile Include="FedexShippingStrategy.cs" />
     <Compile Include="GenericShippingStrategy.cs" />
     <Compile Include="IShippingStrategy.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Checkout.cs" />
+    <Compile Include="ShippingSelector\ShippingMethods.cs" />
     <Compile Include="UpsShippingStrategy.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
